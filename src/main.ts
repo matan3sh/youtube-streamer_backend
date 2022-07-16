@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import helmet from "helmet";
+import "dotenv/config";
 
 import { connectToDatabase, disconnectFromDatabase } from "./utils/database";
 import logger from "./utils/logger";
@@ -11,6 +12,7 @@ import userRoute from "./modules/user/user.route";
 import authRoute from "./modules/auth/auth.route";
 import deserializeUser from "./middlewares/deserializeUser";
 
+require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 const app = express();
 

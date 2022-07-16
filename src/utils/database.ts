@@ -2,8 +2,7 @@ import mongoose from "mongoose";
 import logger from "./logger";
 
 const DB_CONNECTION_STRING =
-  process.env.DB_CONNECTION_STRING ||
-  "mongodb+srv://matan3sh:testtest@youtubestreamer.zk7oq.mongodb.net/youtubeStreamer_db?retryWrites=true&w=majority";
+  process.env.DB_CONNECTION_STRING || "mongodb://localhost:27017/";
 
 export async function connectToDatabase() {
   try {
